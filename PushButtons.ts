@@ -49,7 +49,7 @@ class PushButtonsUDP extends dgram.Socket{
 
 
 export class PushButtons{
-    public constructor(method: string, address: string, port: number) {
+    public constructor(method: 'tcp'|'udp', address: string, port: number) {
         if (method == 'tcp') {
             return new PushButtonsTCP(address, port);
         }
