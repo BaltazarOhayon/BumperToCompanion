@@ -1,0 +1,13 @@
+{
+  "name": "tcpkk",
+  "version": "1.0.0",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "tsx ./bumperToCompanion.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "tsx": "^4.22.4"
+  }
+}
