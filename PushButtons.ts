@@ -14,7 +14,7 @@ class PushButtonsTCP extends net.Socket{
     }
 
     private parsebutton(page: number, line: number, column: number) {
-        var parsed = "LOCATION " + page + "/" + line + "/" + column + " PRESS";
+        const parsed = "LOCATION " + page + "/" + line + "/" + column + " PRESS";
         return parsed;
     }
 
@@ -39,7 +39,7 @@ class PushButtonsUDP extends dgram.Socket{
 
 
     private parsebutton(page: number, line: number, column: number) {
-        var parsed = "LOCATION " + page + "/" + line + "/" + column + " PRESS";
+        const parsed = "LOCATION " + page + "/" + line + "/" + column + " PRESS";
         return parsed;
     }
 }
