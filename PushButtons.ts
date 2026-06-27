@@ -9,7 +9,14 @@ class PushButtonsTCP extends net.Socket{
         });
     }
 
+    public press(page: number, line: number, column: number) {
+        this.write(this.parsebutton(page, line, column));
+    }
 
+    private parsebutton(page: number, line: number, column: number) {
+        var parsed = "LOCATION " + page + "/" + line + "/" + column + " PRESS";
+        return parsed;
+    }
 
 }
 
@@ -25,7 +32,7 @@ class PushButtonsUDP extends dgram.Socket{
     private address: string;
     private port: number;
 
-    public push(page: number, line: number, column: number) {
+    public press(page: number, line: number, column: number) {
         this.send(this.parsebutton(page, line, column), this.port, this.address);
     }
 
@@ -36,8 +43,6 @@ class PushButtonsUDP extends dgram.Socket{
         return parsed;
     }
 }
-
-
 
 
 
