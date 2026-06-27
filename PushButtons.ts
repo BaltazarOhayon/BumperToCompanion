@@ -57,8 +57,8 @@ export class PushButtons{
         if (method == 'udp') {
             return new PushButtonsUDP(address, port);
         }
-        if (method != 'tcp' && method !='udp') {
-            throw new Error("Il existe pas ton protocol chaton");
-        }
+
+        throw new Error("Il existe pas ton protocol chaton");
+
     }
 }
