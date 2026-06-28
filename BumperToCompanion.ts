@@ -1,5 +1,5 @@
-import { TcpSniffer } from "./TcpSniffer.ts"
-import { CompanionCo } from "./CompanionCo.ts"
+import { WeirdTcpSynSniffer } from "./WeirdTcpSynSniffer"
+import { CompanionCo } from "./CompanionCo"
 
 const truc = new CompanionCo("udp", "127.0.0.1", 5000);
 
@@ -9,7 +9,7 @@ const machin = new CompanionCo("tcp", "127.0.0.1", 5001);
 machin.press(1, 2, 3);
 
 
-const tcp = new TcpSniffer(60010);
+const tcp = new WeirdTcpSynSniffer(60010);
 tcp.on('message', ()=>machin.press(1, 2, 3));
 
 tcp.start();

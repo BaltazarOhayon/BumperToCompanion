@@ -137,7 +137,7 @@ interface ITcpDumpOptions {
 }
 
 
-export class TcpSniffer extends TcpDump{
+export class WeirdTcpSynSniffer extends TcpDump{
 	public constructor(destination_port: number,callback: Function) {
 		super({
 			destinationPort: destination_port,
